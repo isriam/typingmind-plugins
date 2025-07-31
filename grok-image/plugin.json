@@ -1,0 +1,32 @@
+{
+  "id": "grok-image-plugin",
+  "name": "Grok Image Generation",
+  "version": "1.0.0",
+  "description": "Generate images using Grok's API from x.ai. Invoke with /generate-image.",
+  "author": "AI Assistant (for Jeremy)",
+  "settings": [
+    {
+      "id": "xaiApiKey",
+      "name": "x.ai API Key",
+      "type": "text",
+      "description": "Your x.ai API key (get from x.ai dashboard)",
+      "required": true,
+      "secret": true
+    }
+  ],
+  "commands": [
+    {
+      "command": "generate-image",
+      "description": "Generate an image from a prompt",
+      "parameters": [
+        {
+          "name": "prompt",
+          "description": "The text prompt for the image",
+          "type": "string",
+          "required": true
+        }
+      ]
+    }
+  ],
+  "entry": "plugin.js"
+}
